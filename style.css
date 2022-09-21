@@ -130,43 +130,55 @@ main {
 .right{
     background-color: white;
     margin: 240px 310px; 
+    justify-content: flex-start;
+    width: 350px;  
+}
+
+form {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
-    width: 350px;
-    
+    flex-wrap: wrap;
 }
 
 input{
-    border: 1px solid red;
+    border: 1px solid #d6d6d8;
     width: 340px;
     height: 40px;
     border-radius: 8px;
-
-}
-
-.cardValidity{
-    border: 1px solid red;
-    width: 140px;
-}
-
-.cardCvc{
-    border: 1px solid red;
-    width: 140px;
-}
-
-
-#month{
-    width: 30px;
+    padding: 15px;
+    font-size: 16px;
     
 }
 
-#year{
-    width: 30px;
+input::placeholder{
+    color: #d6d6d8;
 }
 
+#cardName{
+    margin-bottom: 10px;
+}
+
+.cardValidity, .cardCvc{
+    width: 170px;
+    align-items: flex-start;
+    padding-top: 15px;
+    
+}
+
+.cardCvc{
+    margin-left: 5px;
+}
+
+#month, #year{
+    width: 75px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
 #cardCvc{
-    width: 30px;
+    width: 165px;
+    margin-top: 10px;
 }
 
 
@@ -175,9 +187,19 @@ label {
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 2.5px;
-    border: 1px solid red;
-    
+    margin: 10px 0px;
 }
+
+button{
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 16px;
+    width: 340px;
+    height: 45px;
+    margin-top: 35px;
+    border-radius: 8px;
+}
+
 
 
 
