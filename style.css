@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: black;    
+    justify-content: center;
+    
+    
+}
+
+main {
+    display: flex;
+    max-width: 1440px;
+    max-height: 810px;
+    margin: auto;
+}
+
+.section2 {
+    background-color: white;
+    max-height: 900px;
+    max-width: 865px;
+}
+
+.left {
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 435px;
+    height: 100vh;
+    max-height: 810px;
+    position: relative;
+    color: white;
+} 
+
+.cardFront img, .cardBack img{
+    position: absolute;  
+    width: 400px;
+}
+
+.cardFront img{
+    margin: 170px 150px;
+}
+
+
+.cardBack img{
+    margin: 425px 235px;
+}
+
+.dadosCardFront {
+    position: absolute;
+    margin: 170px 150px;
+    width: 400px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;  
+}
+
+.circles {
+    display: flex;
+    flex-direction: row;
+}
+
+.circle1 {
+    width: 42px;
+    height: 42px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 25px
+}
+
+.circle2 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 35px -10px; 
+}
+
+.cardNumberImg {
+    font-size: 25px;
+    letter-spacing: 3px;
+    width: 350px;
+    height: 30px;
+    margin: 30px 25px 0px 25px;
+}
+
+.nameValidityImg {
+    display: flex;
+    flex-direction: row;
+}
+
+.cardNameImg {
+    font-size: 12px;
+    letter-spacing: 2px;
+    width: 280px;
+    height: 30px;
+    margin: 23px 0px 0px 25px;
+}
+
+.cardValidityImg {
+    font-size: 12px;
+    letter-spacing: 2px;
+    width: 70px;
+    height: 30px;
+    margin: 23px 0px 0px 18px;
+}
+
+.dadosCardBack{
+    position: absolute;
+    margin: 525px 555px;
+    width: 50px;
+    height: 25px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;  
+}
+
+.right{
+    background-color: white;
+    margin: 240px 310px; 
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    width: 350px;
+    
+}
+
+input{
+    border: 1px solid red;
+    width: 340px;
+    height: 40px;
+    border-radius: 8px;
+
+}
+
+.cardValidity{
+    border: 1px solid red;
+    width: 140px;
+}
+
+.cardCvc{
+    border: 1px solid red;
+    width: 140px;
+}
+
+
+#month{
+    width: 30px;
+    
+}
+
+#year{
+    width: 30px;
+}
+
+#cardCvc{
+    width: 30px;
+}
+
+
+label {
+    color: hsl(278, 68%, 11%);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    border: 1px solid red;
+    
+}
+
+
+
+
