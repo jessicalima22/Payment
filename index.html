@@ -38,18 +38,31 @@
             <form action="">
 
                 <label for="cardName"> CARDHOLDER NAME </label>
+                    <div class="borderGradient">
                     <input type="text" id="cardName" name="cardName" placeholder="e.g. Jane Appleseed">
+                    </div>
                 <label for="cardNumber"> CARD NUMBER </label>
+                    <div class="borderGradient">
                     <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5878 9123 0000">
-                    
+                    </div>
                 <div class="cardValidity">
                     <label for="month"> EXP. DATE (MM/YY)</label>
+                        <div class="borderGradientValidity">
                         <input type="text" id="month" name="month" placeholder="MM">
+                        </div>
+                        <div class="borderGradientValidity">
                         <input type="text" id="year" name="year" placeholder="YY">
+                        </div>
                 </div>
                 <div class="cardCvc">
                     <label for="cardCvc"> CVC </label>
+                        <div class="borderGradient">
                         <input type="text" id="cardCvc" name="cardCvc" placeholder="e.g. 123">
+                        </div>
+                </div>
+
+                <div class="borderGradient">
+                    
                 </div>
 
                     <button> Confirm </button>
@@ -58,5 +71,7 @@
         </div>
     </section>
     </main>
+
+    <script src="script.js"> </script>
 </body>
 </html>
