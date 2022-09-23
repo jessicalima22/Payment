@@ -35,16 +35,20 @@
     </section>
     <section class="section2">
         <div class="right">
-            <form action="">
+            <form id="form">
 
                 <label for="cardName"> CARDHOLDER NAME </label>
                     <div class="borderGradientName">
                         <input type="text" id="cardName" name="cardName" placeholder="e.g. Jane Appleseed">
+                        <small class="smallName">Mensagem de erro</small><br>
                     </div>
+                    
                 <label for="cardNumber"> CARD NUMBER </label>
                     <div class="borderGradientNumber">
                         <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5878 9123 0000">
+                        <small class="smallNumber">Mensagem de erro</small><br>
                     </div>
+                    
                 <div class="cardValidity">
                     <label for="month"> EXP. DATE (MM/YY)</label>
                         <div class="borderGradientCardValidity">
@@ -53,19 +57,23 @@
                         <div class="borderGradientCardValidity">
                         <input type="text" id="year" name="year" placeholder="YY">
                         </div>
+                        <small class="smallValidity">Can't be blank</small><br>
                 </div>
+                
                 <div class="cardCvc">
                     <label for="cardCvc"> CVC </label>
                         <div class="borderGradientCardCvc">
                         <input type="text" id="cardCvc" name="cardCvc" placeholder="e.g. 123">
                         </div>
+                        <small class="smallCardCvc">Can't be blank</small><br>
                 </div>
 
-                    <button> Confirm </button>
+                    <button type="submit"> Confirm </button>
 
             </form>
         </div>
     </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
