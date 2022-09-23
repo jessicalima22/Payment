@@ -148,22 +148,24 @@ input{
     border-radius: 8px;
     padding-left: 15px;
     font-size: 16px;
+    outline: none;
     
 }
 
-.borderGradientName, .borderGradientNumber{
+.borderGradient {
     border: none;
-    background-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-    width: 340px;
-    height: 40px; 
+    height: 42px;
     border-radius: 8px;
     position: relative;
     
 }
 
-.borderGradientName{
-    margin-bottom: 12px;
+.borderGradient.name, .borderGradient.number{
+    width: 342px; 
+}
 
+.divCardName{
+    margin-bottom: 12px;
 }
 
 input::placeholder{
@@ -171,7 +173,6 @@ input::placeholder{
 }
 
 #cardName{
-    margin-bottom: 10px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -187,7 +188,7 @@ input::placeholder{
 
 
 
-.cardValidity, .cardCvc{
+.divCardValidity, .divCardCvc{
     width: 170px;
     padding-top: 15px; 
     display: flex;
@@ -196,13 +197,13 @@ input::placeholder{
     height: 88px;
 }
 
-.borderGradientCardValidity{
-    width: 72px;
-    height: 40px;
-    margin-right: 12px;
-    border-radius: 8px;
-    position: relative;
-    background-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+
+
+
+.borderGradient.cardValidity{
+    width: 74px;
+    margin-right: 10px;
+   
 }
 
 .cardCvc{
@@ -229,13 +230,11 @@ input::placeholder{
     transform: translate(-50%, -50%);
 }
 
-.borderGradientCardCvc{
-    width: 165px;
-    height: 40px;
-    background-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-    border-radius: 8px;
-    position: relative;
+.borderGradient.cardCvc{
+    width: 167px;
 }
+
+
 
 label {
     color: hsl(278, 68%, 11%);
@@ -261,13 +260,13 @@ small{
     font-size: 20px;
     height: 20px;
     color: hsl(0, 100%, 66%);
-    
-    
+    margin-top: 5px;
+    display: none;
 }
 
 .smallName, .smallNumber {
     margin-right: 200px;
-    margin-top: 10px
+    
 }
 
 .smallValidity{
@@ -278,6 +277,6 @@ small{
     
 }
 
+/*
 
-
-
+'linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));'; 
