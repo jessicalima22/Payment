@@ -47,7 +47,8 @@ function checkInputs() {
 
     if(cardNumberValue === '') {
         setErrorFor(cardNumber, "Can't be blank");
-    } else {
+    } else if 
+    {} else {
         setSuccessFor(cardNumber);
     }
 
