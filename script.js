@@ -107,11 +107,8 @@ inputs.forEach(input => {
 
 //modifying creditcard image
 
-
-
-    /*
-
-function creditCardNumber() {
+inputs.forEach(input => {
+    input.addEventListener('keyup', ()=>{
     const cardNameValue = cardName.value;
     const cardNumberValue = cardNumber.value;
     const validityMonthValue = validityMonth.value;
@@ -119,9 +116,32 @@ function creditCardNumber() {
     const cardCvcValue = cardCvc.value;
 
     if(cardNameValue !== '') {
-        const cardNumberImg = document.getElementsByClassName('cardNumberImg');
-        cardNumberImg.textContent = cardNumber.value;
+        const cardNameImg = document.querySelector('.cardNameImg');
+        cardNameImg.textContent = cardNameValue.toUpperCase();
+    } 
+
+    if(cardNumberValue !== '') {
+        const cardNumberImg = document.querySelector('.cardNumberImg');
+        cardNumberImg.textContent = cardNumberValue;       
     }
 
-}});*/
+    if(validityMonthValue !== '') {
+        const cardValidityMonthImg = document.querySelector('.cardValidityMonthImg');
+        cardValidityMonthImg.textContent = validityMonthValue;
+    }
+
+    if(validityYearValue !== '') {
+        const cardValidityYearImg = document.querySelector('.cardValidityYearImg');
+        cardValidityYearImg.textContent = validityYearValue;
+    }
+
+    if(cardCvcValue !== '') {
+        const dadosCardBackImg = document.querySelector('.dadosCardBack');
+        dadosCardBackImg.textContent = cardCvcValue;
+    }
+
+
+})});
+
+
 
