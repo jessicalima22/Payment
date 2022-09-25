@@ -4,25 +4,24 @@ const cardNumber = document.getElementById('cardNumber');
 const validityMonth = document.getElementById('month');
 const validityYear = document.getElementById('year');
 const cardCvc = document.getElementById('cardCvc');
-const input = document.querySelector('input');
+const inputs = document.querySelectorAll('input');
+
 
 //focus
 
-input.addEventListener('focus', border)
-
-function border (event) {
-    const borderGradient = input.closest('.borderGradient');
-    borderGradient.style.backgroundImage = 'linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%))'; ;
-}
+inputs.forEach(input => {
+    input.addEventListener('focus', ()=>{
+        const borderGradient = input.closest('.borderGradient');
+        borderGradient.style.backgroundImage = 'linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%))'; 
+})});
 
 //blur
 
-input.addEventListener('blur', noBorder)
-
-function noBorder (event) {
+inputs.forEach(input => {
+input.addEventListener('blur', ()=>{
     const borderGradient = input.closest('.borderGradient');
     borderGradient.style.backgroundImage = 'none';
-}
+})});
 
 //validation
 
@@ -87,16 +86,35 @@ function setSuccessFor (input) {
     borderGradient.style.backgroundImage = 'linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%))'; 
 };
 
-
-
-input.addEventListener('keydown', noError)
-
-function noError (event) {
+inputs.forEach(input => {
+    input.addEventListener('keydown', ()=>{
     const borderGradient = input.closest('.borderGradient');
     borderGradient.style.backgroundColor = 'transparent';
 
     const formControl = input.closest('.control');
     const small = formControl.querySelector('small');
-    small.style.display = 'none';
-    
-}
+    small.style.display = 'none';  
+})});
+
+
+//modifying creditcard image
+
+input.addEventListener('keydown', (e) => {
+
+    /*
+
+function creditCardNumber() {
+    const cardNameValue = cardName.value;
+    const cardNumberValue = cardNumber.value;
+    const validityMonthValue = validityMonth.value;
+    const validityYearValue = validityYear.value;
+    const cardCvcValue = cardCvc.value;
+
+    if(cardNameValue !== '') {
+        const cardNumberImg = document.getElementsByClassName('cardNumberImg');
+        cardNumberImg.textContent = cardNumber.value;
+    }
+
+}});*/
+
+alert('eita')});
