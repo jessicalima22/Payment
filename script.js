@@ -47,25 +47,32 @@ function checkInputs() {
 
     if(cardNumberValue === '') {
         setErrorFor(cardNumber, "Can't be blank");
-    } else if 
-    {} else {
+    } else if (isNaN(cardNumberValue)) { 
+        setErrorFor(cardNumber, "Wrong format, numbers only");
+    } else {
         setSuccessFor(cardNumber);
     }
 
     if(validityMonthValue === '') {
         setErrorFor(validityMonth, "Can't be blank");
+    } else if (isNaN(validityMonthValue)) { 
+        setErrorFor(validityMonth, "Wrong format, numbers only");
     } else {
         setSuccessFor(validityMonth);
     }
 
     if(validityYearValue === '') {
         setErrorFor(validityYear, "Can't be blank");
+    } else if (isNaN(validityYearValue)) { 
+        setErrorFor(validityYear, "Wrong format, numbers only");
     } else {
         setSuccessFor(validityYear);
     }
 
     if(cardCvcValue === '') {
         setErrorFor(cardCvc, "Can't be blank");
+    } else if (isNaN(cardCvcValue)) { 
+        setErrorFor(cardCvc, "Wrong format, numbers only");
     } else {
         setSuccessFor(cardCvc);
     }
@@ -100,7 +107,7 @@ inputs.forEach(input => {
 
 //modifying creditcard image
 
-input.addEventListener('keydown', (e) => {
+
 
     /*
 
@@ -118,4 +125,3 @@ function creditCardNumber() {
 
 }});*/
 
-alert('eita')});

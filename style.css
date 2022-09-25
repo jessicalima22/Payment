@@ -262,10 +262,11 @@ small{
     color: hsl(0, 100%, 66%);
     margin-top: 5px;
     display: none;
+    
 }
 
 .smallName, .smallNumber {
-    margin-right: 200px;
+    margin-right: 150px;
     
 }
 
@@ -274,7 +275,7 @@ small{
 }
 
 .smallCardCvc{
-    
+    margin-left: 5px;
 }
 
 /*
