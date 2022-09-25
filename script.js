@@ -41,11 +41,34 @@ function checkInputs() {
     const cardCvcValue = cardCvc.value;
 
     if(cardNameValue === '') {
-        setErrorFor(cardName, 'preenchimento obrigatórioooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo');
+        setErrorFor(cardName, "Can't be blank");
     } else {
         setSuccessFor(cardName);
     }
 
+    if(cardNumberValue === '') {
+        setErrorFor(cardNumber, "Can't be blank");
+    } else {
+        setSuccessFor(cardNumber);
+    }
+
+    if(validityMonthValue === '') {
+        setErrorFor(validityMonth, "Can't be blank");
+    } else {
+        setSuccessFor(validityMonth);
+    }
+
+    if(validityYearValue === '') {
+        setErrorFor(validityYear, "Can't be blank");
+    } else {
+        setSuccessFor(validityYear);
+    }
+
+    if(cardCvcValue === '') {
+        setErrorFor(cardCvc, "Can't be blank");
+    } else {
+        setSuccessFor(cardCvc);
+    }
 
 };
 
@@ -56,12 +79,24 @@ function setErrorFor (input, message) {
     small.innerText = message;
     const borderGradient = input.closest('.borderGradient');
     borderGradient.style.backgroundColor = 'hsl(0, 100%, 66%)'; 
-    
-
-    
+     
 };
 
 function setSuccessFor (input) {
     const borderGradient = input.closest('.borderGradient');
     borderGradient.style.backgroundImage = 'linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%))'; 
+};
+
+
+
+input.addEventListener('keydown', noError)
+
+function noError (event) {
+    const borderGradient = input.closest('.borderGradient');
+    borderGradient.style.backgroundColor = 'transparent';
+
+    const formControl = input.closest('.control');
+    const small = formControl.querySelector('small');
+    small.style.display = 'none';
+    
 }
