@@ -34,7 +34,8 @@ form.addEventListener('submit', (e) => {
 
 function checkInputs() {
     const cardNameValue = cardName.value;
-    const cardNumberValue = cardNumber.value;
+    const cardNumberUnmask = $('#cardNumber').cleanVal();
+    const cardNumberValue = Number(cardNumberUnmask);
     const validityMonthValue = validityMonth.value;
     const validityYearValue = validityYear.value;
     const cardCvcValue = cardCvc.value;
@@ -47,8 +48,10 @@ function checkInputs() {
 
     if(cardNumberValue === '') {
         setErrorFor(cardNumber, "Can't be blank");
-    } else if (isNaN(cardNumberValue)) { 
+    } else if ((isNaN(cardNumberValue))) { 
         setErrorFor(cardNumber, "Wrong format, numbers only");
+    } else if (cardNumberUnmask.length < 16) { 
+        setErrorFor(cardNumber, "Please type at least 16 characters");
     } else {
         setSuccessFor(cardNumber);
     }
@@ -57,6 +60,8 @@ function checkInputs() {
         setErrorFor(validityMonth, "Can't be blank");
     } else if (isNaN(validityMonthValue)) { 
         setErrorFor(validityMonth, "Wrong format, numbers only");
+    } else if (validityMonthValue.length < 2) { 
+        setErrorFor(validityMonth, "Please type at least 2 characters");
     } else {
         setSuccessFor(validityMonth);
     }
@@ -65,6 +70,8 @@ function checkInputs() {
         setErrorFor(validityYear, "Can't be blank");
     } else if (isNaN(validityYearValue)) { 
         setErrorFor(validityYear, "Wrong format, numbers only");
+    } else if (validityYearValue.length < 2) { 
+        setErrorFor(validityYear, "Please type at least 2 characters");
     } else {
         setSuccessFor(validityYear);
     }
@@ -73,6 +80,8 @@ function checkInputs() {
         setErrorFor(cardCvc, "Can't be blank");
     } else if (isNaN(cardCvcValue)) { 
         setErrorFor(cardCvc, "Wrong format, numbers only");
+    } else if (cardCvcValue.length < 3) { 
+        setErrorFor(cardCvc, "Please type at least 3 characters");
     } else {
         setSuccessFor(cardCvc);
     }
@@ -145,5 +154,5 @@ inputs.forEach(input => {
 
 //Mask
 
-$('#cardNumber').mask('0000 0000 0000 0000');
+$('#cardNumber').mask('AAAA AAAA AAAA AAAA');
 
