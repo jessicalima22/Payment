@@ -143,5 +143,7 @@ inputs.forEach(input => {
 
 })});
 
+//Mask
 
+$('#cardNumber').mask('0000 0000 0000 0000');
 

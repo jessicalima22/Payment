@@ -49,7 +49,7 @@
                 <div class="divCardNumber control">    
                 <label for="cardNumber"> CARD NUMBER </label>
                     <div class="borderGradient number">
-                        <input type="text" id="cardNumber" name="cardNumber" field-mask="0000 0000 0000 0000" placeholder="e.g. 1234 5878 9123 0000">
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5878 9123 0000" maxlength="16">
                     </div>
                     <small class="smallNumber">Mensagem de erro</small><br>
                 </div>    
@@ -57,10 +57,10 @@
                 <div class="divCardValidity control">
                     <label for="month"> EXP. DATE (MM/YY)</label>
                         <div class="borderGradient cardValidity">
-                        <input type="text" id="month" name="month" placeholder="MM" >
+                        <input type="text" id="month" name="month" placeholder="MM" maxlength="2">
                         </div>
                         <div class="borderGradient cardValidity">
-                        <input type="text" id="year" name="year" placeholder="YY">
+                        <input type="text" id="year" name="year" placeholder="YY" maxlength="2">
                         </div>
                         <small class="smallValidity">Can't be blank</small><br>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="divCardCvc control">
                     <label for="cardCvc"> CVC </label>
                         <div class="borderGradient cardCvc">
-                        <input type="text" id="cardCvc" name="cardCvc" placeholder="e.g. 123" >
+                        <input type="text" id="cardCvc" name="cardCvc" placeholder="e.g. 123" maxlength="3">
                         </div>
                         <small class="smallCardCvc">Can't be blank</small><br>
                 </div>
@@ -79,6 +79,9 @@
         </div>
     </section>
     </main>
+   
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
