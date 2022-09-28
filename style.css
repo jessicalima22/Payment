@@ -128,7 +128,7 @@ main {
     letter-spacing: 2px;  
 }
 
-.right{
+.rightBefore{
     background-color: white;
     margin: 240px 310px; 
     justify-content: flex-start;
@@ -148,8 +148,7 @@ input{
     border-radius: 8px;
     padding-left: 15px;
     font-size: 16px;
-    outline: none;
-    
+    outline: none;  
 }
 
 .borderGradient {
@@ -157,7 +156,6 @@ input{
     height: 42px;
     border-radius: 8px;
     position: relative;
-    
 }
 
 .borderGradient.name, .borderGradient.number{
@@ -186,8 +184,6 @@ input::placeholder{
     transform: translate(-50%, -50%);
 }
 
-
-
 .divCardValidity, .divCardCvc{
     width: 170px;
     padding-top: 15px; 
@@ -197,13 +193,9 @@ input::placeholder{
     height: 88px;
 }
 
-
-
-
 .borderGradient.cardValidity{
     width: 74px;
-    margin-right: 10px;
-   
+    margin-right: 10px;  
 }
 
 .cardCvc{
@@ -220,7 +212,6 @@ input::placeholder{
     transform: translate(-50%, -50%);
 }
 
-
 #cardCvc{
     width: 162px;
     height: 39px;
@@ -233,8 +224,6 @@ input::placeholder{
 .borderGradient.cardCvc{
     width: 167px;
 }
-
-
 
 label {
     color: hsl(278, 68%, 11%);
@@ -252,6 +241,7 @@ button{
     height: 45px;
     margin-top: 40px;
     border-radius: 8px;
+    cursor: pointer;  
 }
 
 /* Error */
@@ -261,21 +251,43 @@ small{
     height: 20px;
     color: hsl(0, 100%, 66%);
     margin-top: 5px;
-    display: none;
-    
+    display: none; 
 }
 
 .smallName, .smallNumber {
     margin-right: 150px;
-    
-}
-
-.smallValidity{
-    
 }
 
 .smallCardCvc{
     margin-left: 5px;
+}
+
+/*pg 2 */
+
+.iconComplete img{
+    margin-top: 40px;
+    width: 70px
+}
+
+.rightAfter{
+    text-align: center;
+    height: 300px;
+    display: none;
+}
+
+h1{
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #929297;
+    
 }
 
 /*

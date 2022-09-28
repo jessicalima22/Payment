@@ -30,6 +30,8 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkInputs();
+
+    
 });
 
 function checkInputs() {
@@ -39,11 +41,14 @@ function checkInputs() {
     const validityMonthValue = validityMonth.value;
     const validityYearValue = validityYear.value;
     const cardCvcValue = cardCvc.value;
+    var Sucess = ''
+  
 
     if(cardNameValue === '') {
         setErrorFor(cardName, "Can't be blank");
     } else {
         setSuccessFor(cardName);
+        Sucess++
     }
 
     if(cardNumberValue === '') {
@@ -54,6 +59,7 @@ function checkInputs() {
         setErrorFor(cardNumber, "Please type at least 16 characters");
     } else {
         setSuccessFor(cardNumber);
+        Sucess++
     }
 
     if(validityMonthValue === '') {
@@ -64,6 +70,7 @@ function checkInputs() {
         setErrorFor(validityMonth, "Please type at least 2 characters");
     } else {
         setSuccessFor(validityMonth);
+        Sucess++
     }
 
     if(validityYearValue === '') {
@@ -74,6 +81,7 @@ function checkInputs() {
         setErrorFor(validityYear, "Please type at least 2 characters");
     } else {
         setSuccessFor(validityYear);
+        Sucess++
     }
 
     if(cardCvcValue === '') {
@@ -84,10 +92,23 @@ function checkInputs() {
         setErrorFor(cardCvc, "Please type at least 3 characters");
     } else {
         setSuccessFor(cardCvc);
-    }
+        Sucess++
+    };
 
+    console.log(Sucess)
+
+    if (Sucess === 5){
+        const divForm = document.getElementById('form');
+        const divRight = document.querySelector('.rightAfter');
+        divForm.style.display = 'none';
+        divRight.style.display = 'inline';
+    }
 };
 
+
+  
+    
+   
 function setErrorFor (input, message) {
     const formControl = input.closest('.control');
     const small = formControl.querySelector('small');
@@ -152,7 +173,33 @@ inputs.forEach(input => {
 
 })});
 
+
+
 //Mask
 
 $('#cardNumber').mask('AAAA AAAA AAAA AAAA');
 
+/*send Form
+
+
+
+form.addEventListener('submit', (e) => {
+if (){
+
+}});
+
+
+
+
+form.addEventListener('submit', (e) => {
+    let status = '';
+
+    if(checkInputs(setSuccessFor(validityYear))){
+    console.log('consegui carai');
+    status = ok
+    console.log (status)
+}
+
+
+    
+});*/
