@@ -95,19 +95,21 @@ function checkInputs() {
         Sucess++
     };
 
-    console.log(Sucess)
-
     if (Sucess === 5){
         const divForm = document.getElementById('form');
         const divRight = document.querySelector('.rightAfter');
+        const circle1 = document.querySelector('.circle1');
+        const circle2 = document.querySelector('.circle2');
         divForm.style.display = 'none';
         divRight.style.display = 'inline';
+        circle1.style.margin = '25px 25px 25px 70px';
+        circle2.style.margin = '35px -105px';
+        
     }
 };
 
 
-  
-    
+      
    
 function setErrorFor (input, message) {
     const formControl = input.closest('.control');
@@ -115,8 +117,7 @@ function setErrorFor (input, message) {
     small.style.display = 'inline';
     small.innerText = message;
     const borderGradient = input.closest('.borderGradient');
-    borderGradient.style.backgroundColor = 'hsl(0, 100%, 66%)'; 
-     
+    borderGradient.style.backgroundColor = 'hsl(0, 100%, 66%)';  
 };
 
 function setSuccessFor (input) {
@@ -179,27 +180,3 @@ inputs.forEach(input => {
 
 $('#cardNumber').mask('AAAA AAAA AAAA AAAA');
 
-/*send Form
-
-
-
-form.addEventListener('submit', (e) => {
-if (){
-
-}});
-
-
-
-
-form.addEventListener('submit', (e) => {
-    let status = '';
-
-    if(checkInputs(setSuccessFor(validityYear))){
-    console.log('consegui carai');
-    status = ok
-    console.log (status)
-}
-
-
-    
-});*/
